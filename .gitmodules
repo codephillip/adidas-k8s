@@ -1,3 +1,6 @@
 [submodule "adidas-express-sub"]
 	path = adidas-express-sub
 	url = git@github.com:codephillip/adidas-express-sub.git
+[submodule "adidas-express-email"]
+	path = adidas-express-email
+	url = git@github.com:codephillip/adidas-express-email.git
