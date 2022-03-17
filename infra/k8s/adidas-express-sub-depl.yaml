@@ -14,8 +14,7 @@ spec:
     spec:
       containers:
         - name: adidas-express-sub
-          # change this to docker
-          image: us.gcr.io/adidas-317008/adidas_express_sub
+          image: us.gcr.io/adidas-test-344408/adidas_express_sub
           env:
             - name: NATS_CLIENT_ID
               valueFrom:

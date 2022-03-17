@@ -1,0 +1,29 @@
+apiVersion: skaffold/v2alpha3
+kind: Config
+deploy:
+  kubectl:
+    manifests:
+      - ./infra/k8s/*
+build:
+  googleCloudBuild:
+    projectId: adidas-test-344408
+  artifacts:
+    - image: us.gcr.io/adidas-test-344408/adidas_express_sub
+      context: adidas-express-sub
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          # deploy only files ending with X that have changed otherwise rebuild everything
+          - src: "src/**/*.ts"
+            dest: .
+#    - image: us.gcr.io/adidas-test-344408/adidas_express_email
+#      context: adidas-express-email
+#      docker:
+#        dockerfile: Dockerfile
+#      sync:
+#        manual:
+#          - src: "src/**/*.ts"
+#            dest: .
+
+

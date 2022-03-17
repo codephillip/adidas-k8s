@@ -1,0 +1,29 @@
+# automates k8s local development commands
+apiVersion: skaffold/v2alpha3
+kind: Config
+deploy:
+  kubectl:
+    manifests:
+      - ./infra/k8s/*
+build:
+  local:
+    push: false
+  artifacts:
+    - image: codephillip/adidas_express_sub
+      context: adidas-express-sub
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "src/**/*.ts"
+            dest: .
+#    - image: codephillip/adidas_express_email
+#      context: adidas-express-email
+#      docker:
+#        dockerfile: Dockerfile
+#      sync:
+#        manual:
+#          - src: "src/**/*.ts"
+#            dest: .
+
+
