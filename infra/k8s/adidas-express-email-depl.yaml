@@ -1,0 +1,67 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: adidas-express-email-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: adidas-express-email
+  template:
+    metadata:
+      labels:
+        app: adidas-express-email
+    spec:
+      containers:
+        - name: adidas-express-email
+          # change this to docker
+          image: us.gcr.io/adidas-317008/adidas_express_email
+          env:
+            - name: NATS_CLIENT_ID
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: NATS_URL
+              value: 'http://nats-srv:4222'
+            - name: NATS_CLUSTER_ID
+              value: adidas_cluster
+            - name: API_VERSION
+              valueFrom:
+                secretKeyRef:
+                  name: api-version
+                  key: API_VERSION
+            - name: POSTGRES_USER
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-user
+                  key: POSTGRES_USER
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-password
+                  key: POSTGRES_PASSWORD
+            - name: POSTGRES_DB
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-email-db
+                  key: POSTGRES_DB
+            - name: DEBUG
+              valueFrom:
+                secretKeyRef:
+                  name: debug
+                  key: DEBUG
+            - name: NODE_ENV
+              value: 'production'
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: adidas-express-email-srv
+spec:
+  selector:
+    app: adidas-express-email
+  ports:
+    - name: adidas-express-email
+      protocol: TCP
+      port: 4002
+      targetPort: 8000
