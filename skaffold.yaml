@@ -17,13 +17,13 @@ build:
           # deploy only files ending with X that have changed otherwise rebuild everything
           - src: "src/**/*.ts"
             dest: .
-#    - image: us.gcr.io/adidas-test-344408/adidas_express_email
-#      context: adidas-express-email
-#      docker:
-#        dockerfile: Dockerfile
-#      sync:
-#        manual:
-#          - src: "src/**/*.ts"
-#            dest: .
+    - image: us.gcr.io/adidas-test-344408/adidas_express_email
+      context: adidas-express-email
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "src/**/*.ts"
+            dest: .
 
 

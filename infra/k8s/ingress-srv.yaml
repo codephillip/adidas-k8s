@@ -21,9 +21,10 @@ spec:
                 port:
                   number: 4001
 #          - path: /api/v1/(email)|(emailSwagger)|(emailAdmin)
-#            pathType: Prefix
-#            backend:
-#              service:
-#                name: adidas-express-email-srv
-#                port:
-#                  number: 4002
+          - path: /(email)|(emailSwagger)|(emailAdmin)
+            pathType: Prefix
+            backend:
+              service:
+                name: adidas-express-email-srv
+                port:
+                  number: 4002

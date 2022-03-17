@@ -17,13 +17,13 @@ build:
         manual:
           - src: "src/**/*.ts"
             dest: .
-#    - image: codephillip/adidas_express_email
-#      context: adidas-express-email
-#      docker:
-#        dockerfile: Dockerfile
-#      sync:
-#        manual:
-#          - src: "src/**/*.ts"
-#            dest: .
+    - image: codephillip/adidas_express_email
+      context: adidas-express-email
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "src/**/*.ts"
+            dest: .
 
 
