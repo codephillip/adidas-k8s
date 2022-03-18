@@ -25,5 +25,21 @@ build:
         manual:
           - src: "src/**/*.ts"
             dest: .
+    - image: us.gcr.io/adidas-test-344408/adidas_express_public
+      context: adidas-express-public
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "src/**/*.ts"
+            dest: .
+    - image: us.gcr.io/adidas-test-344408/adidas_django_auth
+      context: adidas-django-auth
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "adidas_django_auth/**/*.py"
+            dest: .
 
 

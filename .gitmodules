@@ -4,3 +4,9 @@
 [submodule "adidas-express-email"]
 	path = adidas-express-email
 	url = git@github.com:codephillip/adidas-express-email.git
+[submodule "adidas-express-public"]
+	path = adidas-express-public
+	url = git@github.com:codephillip/adidas-express-public.git
+[submodule "adidas-django-auth"]
+	path = adidas-django-auth
+	url = git@github.com:codephillip/adidas-django-auth.git

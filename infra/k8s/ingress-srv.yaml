@@ -12,17 +12,32 @@ spec:
     - host: www.testadidas.io
       http:
         paths:
-          - path: /api/v1/(subscriptions)|(campaigns)|(subscriptionSwagger)|(subscriptionAdmin)
+          - path: /auth
             pathType: Prefix
             backend:
               service:
-                name: adidas-express-sub-srv
+                name: adidas-django-auth-srv
                 port:
-                  number: 4001
-          - path: /api/v1/(emails)|(emailSwagger)|(emailAdmin)
+                  number: 4003
+          - path: /api/v1/(emails)|(subscriptions)|(campaigns)|(swagger)
             pathType: Prefix
             backend:
               service:
-                name: adidas-express-email-srv
+                name: adidas-express-public-srv
                 port:
-                  number: 4002
+                  number: 4000
+            # direct access to the other services is disabled
+#          - path: /api/v1/(subscriptionSwagger)|(subscriptionAdmin)
+#            pathType: Prefix
+#            backend:
+#              service:
+#                name: adidas-express-sub-srv
+#                port:
+#                  number: 4001
+#          - path: /api/v1/(emailSwagger)|(emailAdmin)
+#            pathType: Prefix
+#            backend:
+#              service:
+#                name: adidas-express-email-srv
+#                port:
+#                  number: 4002
