@@ -12,16 +12,14 @@ spec:
     - host: www.testadidas.io
       http:
         paths:
-#          - path: /api/v1/(subscription)|(subscriptionSwagger)|(subscriptionAdmin)
-          - path: /(subscription)|(swagger)|(admin)
+          - path: /api/v1/(subscriptions)|(campaigns)|(subscriptionSwagger)|(subscriptionAdmin)
             pathType: Prefix
             backend:
               service:
                 name: adidas-express-sub-srv
                 port:
                   number: 4001
-#          - path: /api/v1/(email)|(emailSwagger)|(emailAdmin)
-          - path: /(email)|(emailSwagger)|(emailAdmin)
+          - path: /api/v1/(emails)|(emailSwagger)|(emailAdmin)
             pathType: Prefix
             backend:
               service:
