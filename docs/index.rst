@@ -14,7 +14,7 @@ Tools
 #. Typescript: Used to enforce data types mostly in asynchronous communication
 #. Swagger: Used for documentation
 #. Postman: Used to test various endpoints and create documentation
-#. Expressjs: Used to run microservices using Javascript
+#. Expressjs: Used to run microservices using Javascript and Node version 16(16-slim)
 #. Kubernetes: Used to manage microservice deployment, scaling and monitoring
 #. Docker: Used to encapsulate each service for easy deployment
 #. NATS: Used as an event bus in asynchronous communication
@@ -52,7 +52,6 @@ Resources
 * Microservices: `Up and Running`_ by Ronnie Mitra
 * `Building Microservices`_ by Sam Newman
 * Architecting container and microservice-based applications_ microsoft
-* Microsoft .Net `architecture blog`_
 * .NET Microservices: Architecture for Containerized_ .NET Applications
 * Sphinx_ reStructuredText docs
 * Sourceforge_ reStructuredText docs
