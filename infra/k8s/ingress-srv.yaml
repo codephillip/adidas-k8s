@@ -26,18 +26,3 @@ spec:
                 name: adidas-express-public-srv
                 port:
                   number: 4000
-            # direct access to the other services is disabled
-#          - path: /api/v1/(subscriptionSwagger)|(subscriptionAdmin)
-#            pathType: Prefix
-#            backend:
-#              service:
-#                name: adidas-express-sub-srv
-#                port:
-#                  number: 4001
-#          - path: /api/v1/(emailSwagger)|(emailAdmin)
-#            pathType: Prefix
-#            backend:
-#              service:
-#                name: adidas-express-email-srv
-#                port:
-#                  number: 4002
