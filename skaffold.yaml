@@ -6,9 +6,9 @@ deploy:
       - ./infra/k8s/*
 build:
   googleCloudBuild:
-    projectId: adidas-test-344408
+    projectId: sixth-loader-344609
   artifacts:
-    - image: us.gcr.io/adidas-test-344408/adidas_express_sub
+    - image: us.gcr.io/sixth-loader-344609/adidas_express_sub
       context: adidas-express-sub
       docker:
         dockerfile: Dockerfile
@@ -17,7 +17,7 @@ build:
           # deploy only files ending with X that have changed otherwise rebuild everything
           - src: "src/**/*.ts"
             dest: .
-    - image: us.gcr.io/adidas-test-344408/adidas_express_email
+    - image: us.gcr.io/sixth-loader-344609/adidas_express_email
       context: adidas-express-email
       docker:
         dockerfile: Dockerfile
@@ -25,7 +25,7 @@ build:
         manual:
           - src: "src/**/*.ts"
             dest: .
-    - image: us.gcr.io/adidas-test-344408/adidas_express_public
+    - image: us.gcr.io/sixth-loader-344609/adidas_express_public
       context: adidas-express-public
       docker:
         dockerfile: Dockerfile
@@ -33,7 +33,7 @@ build:
         manual:
           - src: "src/**/*.ts"
             dest: .
-    - image: us.gcr.io/adidas-test-344408/adidas_django_auth
+    - image: us.gcr.io/sixth-loader-344609/adidas_django_auth
       context: adidas-django-auth
       docker:
         dockerfile: Dockerfile

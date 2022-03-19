@@ -1,0 +1,1011 @@
+{
+	"info": {
+		"_postman_id": "dd88eb83-2bcb-481e-8aa2-801e458d0216",
+		"name": "Adidas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "authentication",
+			"item": [
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT ffpiadom9q489mfe9amfsdiofjdasklfdsfdasfjdaosifoaifm",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"foobizz3d\",\n    \"last_name\": \"foobizz3d4\",\n    \"username\":\"fizzbuzz3dd\",\n    \"email\": \"foobar3@foobizz23.coddm\",\n    \"password\": \"superNATURAL#123\",\n    \"gender\": \"male\",\n    \"role\": \"admin\",\n    \"dob\": \"2000-09-02\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://www.testadidas.io/auth/users/",
+							"protocol": "http",
+							"host": [
+								"www",
+								"testadidas",
+								"io"
+							],
+							"path": [
+								"auth",
+								"users",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Signup",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT ffpiadom9q489mfe9amfsdiofjdasklfdsfdasfjdaosifoaifm",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"first_name\": \"foobizz3d\",\n    \"last_name\": \"foobizz3d4\",\n    \"username\":\"fizzbuzz366\",\n    \"email\": \"foobar3@foobizz23.com\",\n    \"password\": \"superNATURAL#123\",\n    \"gender\": \"male\",\n    \"role\": \"admin\",\n    \"dob\": \"2000-09-02\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://www.testadidas.io/auth/users/",
+									"protocol": "http",
+									"host": [
+										"www",
+										"testadidas",
+										"io"
+									],
+									"path": [
+										"auth",
+										"users",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 18 Mar 2022 19:05:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "102"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"email\": \"foobar3@foobizz23.com\",\n    \"username\": \"fizzbuzz366\",\n    \"id\": \"06f3dda5-2f1c-45c5-bf17-7625ef051f2a\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"fizzbuzz3dd\",\n    \"password\": \"superNATURAL#123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://www.testadidas.io/auth/token/login/",
+							"protocol": "http",
+							"host": [
+								"www",
+								"testadidas",
+								"io"
+							],
+							"path": [
+								"auth",
+								"token",
+								"login",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update user Copy",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"fizzbuzz3dd\",\n    \"password\": \"superNATURAL#123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://www.testadidas.io/auth/token/login/",
+									"protocol": "http",
+									"host": [
+										"www",
+										"testadidas",
+										"io"
+									],
+									"path": [
+										"auth",
+										"token",
+										"login",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 18 Mar 2022 19:04:43 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "537"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"refresh\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY0NzgwMzA4MywianRpIjoiOTZiZDk2NzdjZTgwNDNiMGIyODhhNTVlYTY4NjY0YmQiLCJ1c2VyX2lkIjoiZGY2MThiYmQtZTM4Ny00YmQzLTkwNDgtZmNkM2NhNTYyNGE2In0.8MYNrqmtNmgTwabTfInBwAPu8tc_el623E04RzGVXlo\",\n    \"access\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ3NzE2NjgzLCJqdGkiOiJjNDQ4ZjkzMDNjOTE0OWI1OWM5OWI2YjNlYzk3M2U5NCIsInVzZXJfaWQiOiJkZjYxOGJiZC1lMzg3LTRiZDMtOTA0OC1mY2QzY2E1NjI0YTYifQ.zRGXg53YSyNu9IjZJb067_ooSra9ryMHDGnodd3Q43g\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "campaigns",
+			"item": [
+				{
+					"name": "get all campaigns",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "JWT {{JWT}}"
+							}
+						],
+						"url": {
+							"raw": "http://www.testadidas.io/api/v1/campaigns",
+							"protocol": "http",
+							"host": [
+								"www",
+								"testadidas",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"campaigns"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all campaigns",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "JWT {{JWT}}"
+									}
+								],
+								"url": {
+									"raw": "http://www.testadidas.io/api/v1/campaigns",
+									"protocol": "http",
+									"host": [
+										"www",
+										"testadidas",
+										"io"
+									],
+									"path": [
+										"api",
+										"v1",
+										"campaigns"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 18 Mar 2022 19:13:15 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "549"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"225-AUECOQT3VUtdUJ17xTVCcA9BdTA\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 200,\n    \"data\": [\n        {\n            \"id\": \"0acbfc2a-1e20-4816-b62c-6431b4bda955\",\n            \"name\": \"foobar\",\n            \"createdAt\": \"2022-03-18T19:13:09.957Z\",\n            \"subscriptions\": []\n        },\n        {\n            \"id\": \"b1e022a6-ecdc-455e-8271-a2513127ec60\",\n            \"name\": \"adidas basketball promotion\",\n            \"createdAt\": \"2022-03-18T10:01:46.550Z\",\n            \"subscriptions\": []\n        },\n        {\n            \"id\": \"2b2bef56-625f-4226-8242-32fc77db05c3\",\n            \"name\": \"adidas shoes promotion\",\n            \"createdAt\": \"2022-03-18T10:00:30.946Z\",\n            \"subscriptions\": []\n        },\n        {\n            \"id\": \"a9b527da-c408-4656-89eb-98ccefa9fed9\",\n            \"name\": \"newsletter\",\n            \"createdAt\": \"2022-03-18T05:19:12.132Z\",\n            \"subscriptions\": []\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "create campaign",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT {{JWT}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"shoes podcast\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://www.testadidas.io/api/v1/campaigns",
+							"protocol": "http",
+							"host": [
+								"www",
+								"testadidas",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"campaigns"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create campaign",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT {{JWT}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"shoes podcast\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://www.testadidas.io/api/v1/campaigns",
+									"protocol": "http",
+									"host": [
+										"www",
+										"testadidas",
+										"io"
+									],
+									"path": [
+										"api",
+										"v1",
+										"campaigns"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Mar 2022 04:05:28 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "134"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"86-7A+oxoxWuTPBGm30kmiRXxyPxxk\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 201,\n    \"data\": {\n        \"name\": \"shoes podcast\",\n        \"id\": \"32a79d5c-6846-46c8-88e7-844a4498ca3c\",\n        \"createdAt\": \"2022-03-19T04:05:28.388Z\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "subscriptions",
+			"item": [
+				{
+					"name": "get all subscriptions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "JWT {{JWT}}"
+							}
+						],
+						"url": {
+							"raw": "http://www.testadidas.io/api/v1/subscriptions",
+							"protocol": "http",
+							"host": [
+								"www",
+								"testadidas",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"subscriptions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all subscriptions",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "JWT {{JWT}}"
+									}
+								],
+								"url": {
+									"raw": "http://www.testadidas.io/api/v1/subscriptions",
+									"protocol": "http",
+									"host": [
+										"www",
+										"testadidas",
+										"io"
+									],
+									"path": [
+										"api",
+										"v1",
+										"subscriptions"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Mar 2022 04:04:15 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "738"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2e2-6pLoYMMAjTelU1yp38E0FxIYWkI\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 200,\n    \"data\": [\n        {\n            \"id\": \"cf87eb17-4e11-4f85-a878-38e967fe6948\",\n            \"email\": \"codephillip@gmail.com\",\n            \"firstName\": \"tester\",\n            \"gender\": \"male\",\n            \"dob\": \"2010-01-01\",\n            \"consented\": true,\n            \"createdAt\": \"2022-03-19T04:03:00.077Z\",\n            \"campaign\": {\n                \"id\": \"0acbfc2a-1e20-4816-b62c-6431b4bda955\",\n                \"name\": \"foobar\",\n                \"createdAt\": \"2022-03-18T19:13:09.957Z\"\n            },\n            \"campaignId\": \"0acbfc2a-1e20-4816-b62c-6431b4bda955\"\n        },\n        {\n            \"id\": \"1dabdba8-ea0a-4aee-bb16-30456032b622\",\n            \"email\": \"codephillip1@gmail.com\",\n            \"firstName\": \"tester1\",\n            \"gender\": \"male\",\n            \"dob\": \"2010-01-01\",\n            \"consented\": true,\n            \"createdAt\": \"2022-03-19T04:03:42.967Z\",\n            \"campaign\": {\n                \"id\": \"0acbfc2a-1e20-4816-b62c-6431b4bda955\",\n                \"name\": \"foobar\",\n                \"createdAt\": \"2022-03-18T19:13:09.957Z\"\n            },\n            \"campaignId\": \"0acbfc2a-1e20-4816-b62c-6431b4bda955\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "get subscription",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "JWT {{JWT}}"
+							}
+						],
+						"url": {
+							"raw": "http://www.testadidas.io/api/v1/subscriptions/287eb15b-cfe2-440f-ac11-e8547e76dff0",
+							"protocol": "http",
+							"host": [
+								"www",
+								"testadidas",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"subscriptions",
+								"287eb15b-cfe2-440f-ac11-e8547e76dff0"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get subscription",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "JWT {{JWT}}"
+									}
+								],
+								"url": {
+									"raw": "http://www.testadidas.io/api/v1/subscriptions/cf87eb17-4e11-4f85-a878-38e967fe6948",
+									"protocol": "http",
+									"host": [
+										"www",
+										"testadidas",
+										"io"
+									],
+									"path": [
+										"api",
+										"v1",
+										"subscriptions",
+										"cf87eb17-4e11-4f85-a878-38e967fe6948"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Mar 2022 04:28:11 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "380"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"17c-td6ArtvbUB7DK0s3MpkCj74tvRc\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 200,\n    \"data\": {\n        \"id\": \"cf87eb17-4e11-4f85-a878-38e967fe6948\",\n        \"email\": \"codephillip@gmail.com\",\n        \"firstName\": \"tester\",\n        \"gender\": \"male\",\n        \"dob\": \"2010-01-01\",\n        \"consented\": true,\n        \"createdAt\": \"2022-03-19T04:03:00.077Z\",\n        \"campaign\": {\n            \"id\": \"0acbfc2a-1e20-4816-b62c-6431b4bda955\",\n            \"name\": \"foobar\",\n            \"createdAt\": \"2022-03-18T19:13:09.957Z\"\n        },\n        \"campaignId\": \"0acbfc2a-1e20-4816-b62c-6431b4bda955\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "cancel subscription",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "JWT {{JWT}}"
+							}
+						],
+						"url": {
+							"raw": "http://www.testadidas.io/api/v1/subscriptions/838e300e-248c-477f-a366-b1183ff177d1",
+							"protocol": "http",
+							"host": [
+								"www",
+								"testadidas",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"subscriptions",
+								"838e300e-248c-477f-a366-b1183ff177d1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "cancel subscription",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "JWT {{JWT}}"
+									}
+								],
+								"url": {
+									"raw": "http://www.testadidas.io/api/v1/subscriptions/cf87eb17-4e11-4f85-a878-38e967fe6948",
+									"protocol": "http",
+									"host": [
+										"www",
+										"testadidas",
+										"io"
+									],
+									"path": [
+										"api",
+										"v1",
+										"subscriptions",
+										"cf87eb17-4e11-4f85-a878-38e967fe6948"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Mar 2022 04:30:44 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "268"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10c-DYy//cfLdRbdWKaLni5cDPzs3ao\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 200,\n    \"data\": {\n        \"id\": \"cf87eb17-4e11-4f85-a878-38e967fe6948\",\n        \"email\": \"codephillip@gmail.com\",\n        \"firstName\": \"tester\",\n        \"gender\": \"male\",\n        \"dob\": \"2010-01-01\",\n        \"consented\": true,\n        \"createdAt\": \"2022-03-19T04:03:00.077Z\",\n        \"campaignId\": \"0acbfc2a-1e20-4816-b62c-6431b4bda955\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "create subscription",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "JWT {{JWT}}",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"codephillip1@gmai3.com\",\n    \"consented\": true,\n    \"firstName\": \"tester2\",\n    \"gender\": \"male\",\n    \"dob\": \"01-01-2010\",\n    \"campaign\": \"0acbfc2a-1e20-4816-b62c-6431b4bda955\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://www.testadidas.io/api/v1/subscriptions",
+							"protocol": "http",
+							"host": [
+								"www",
+								"testadidas",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"subscriptions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create subscription",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "JWT {{JWT}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"codephillip1@gmail.com\",\n    \"consented\": true,\n    \"firstName\": \"tester1\",\n    \"gender\": \"male\",\n    \"dob\": \"01-01-2010\",\n    \"campaign\": \"0acbfc2a-1e20-4816-b62c-6431b4bda955\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://www.testadidas.io/api/v1/subscriptions",
+									"protocol": "http",
+									"host": [
+										"www",
+										"testadidas",
+										"io"
+									],
+									"path": [
+										"api",
+										"v1",
+										"subscriptions"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Mar 2022 04:03:42 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "590"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"24e-0w36lqqPFuSJwXJFpvZg+SmyHCg\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 201,\n    \"data\": {\n        \"email\": \"codephillip1@gmail.com\",\n        \"firstName\": \"tester1\",\n        \"gender\": \"male\",\n        \"dob\": \"01-01-2010\",\n        \"consented\": true,\n        \"campaign\": {\n            \"id\": \"0acbfc2a-1e20-4816-b62c-6431b4bda955\",\n            \"name\": \"foobar\",\n            \"createdAt\": \"2022-03-18T19:13:09.957Z\",\n            \"subscriptions\": [\n                {\n                    \"id\": \"cf87eb17-4e11-4f85-a878-38e967fe6948\",\n                    \"email\": \"codephillip@gmail.com\",\n                    \"firstName\": \"tester\",\n                    \"gender\": \"male\",\n                    \"dob\": \"2010-01-01\",\n                    \"consented\": true,\n                    \"createdAt\": \"2022-03-19T04:03:00.077Z\"\n                }\n            ]\n        },\n        \"id\": \"1dabdba8-ea0a-4aee-bb16-30456032b622\",\n        \"createdAt\": \"2022-03-19T04:03:42.967Z\",\n        \"campaignId\": \"0acbfc2a-1e20-4816-b62c-6431b4bda955\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "emails",
+			"item": [
+				{
+					"name": "get all emails",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT {{JWT}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://www.testadidas.io/api/v1/emails",
+							"protocol": "http",
+							"host": [
+								"www",
+								"testadidas",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"emails"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all emails",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT {{JWT}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://www.testadidas.io/api/v1/emails",
+									"protocol": "http",
+									"host": [
+										"www",
+										"testadidas",
+										"io"
+									],
+									"path": [
+										"api",
+										"v1",
+										"emails"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 18 Mar 2022 19:09:06 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "554"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"22a-RZiMwiAeBXdIT6SkRhQU2pJaOxo\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 200,\n    \"data\": [\n        {\n            \"id\": \"f54349f1-9d8c-497e-bf60-5acf74906052\",\n            \"emailAddress\": \"codephillip@gmail.com\",\n            \"emailType\": \"Newsletter\",\n            \"message\": \"Hi foobar, Thank you for subscribing to the newsletter\",\n            \"subject\": \"Newsletter subscription\",\n            \"createdAt\": \"2022-03-18T05:19:31.635Z\"\n        },\n        {\n            \"id\": \"76d7563b-9994-412f-948a-c47c61e109c0\",\n            \"emailAddress\": \"codephillip@gmail.com\",\n            \"emailType\": \"Newsletter\",\n            \"message\": \"Hi foobar, You have cancelled your subscription to the news letter\",\n            \"subject\": \"Cancelled newsletter subscription\",\n            \"createdAt\": \"2022-03-18T10:40:10.550Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "send email",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT {{JWT}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"emailAddress\": \"codephillip@gmail.com\",\n    \"subject\": \"helloworld\",\n    \"message\": \"foobar message\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://www.testadidas.io/api/v1/emails",
+							"protocol": "http",
+							"host": [
+								"www",
+								"testadidas",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"emails"
+							]
+						},
+						"description": "emailType; 'General', 'Newsletter', 'Promotions', 'Reminder'"
+					},
+					"response": [
+						{
+							"name": "send email",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT {{JWT}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"emailAddress\": \"codephillip@gmail.com\",\n    \"subject\": \"helloworld\",\n    \"message\": \"foobar message\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://www.testadidas.io/api/v1/emails",
+									"protocol": "http",
+									"host": [
+										"www",
+										"testadidas",
+										"io"
+									],
+									"path": [
+										"api",
+										"v1",
+										"emails"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Mar 2022 04:08:01 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "222"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"de-MfCIlYLTTLPdZc/InnN/ke24jSQ\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 201,\n    \"data\": {\n        \"emailAddress\": \"codephillip@gmail.com\",\n        \"message\": \"foobar message\",\n        \"subject\": \"helloworld\",\n        \"id\": \"50cdd827-2d44-4bd3-86a8-b50d8226330d\",\n        \"emailType\": \"General\",\n        \"createdAt\": \"2022-03-19T04:08:01.938Z\"\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

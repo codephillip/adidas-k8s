@@ -40,10 +40,28 @@ Localhost development setup
   * pip3
 * Install minikube
 * Install kubectl ``sudo snap install kubectl --classic``
-* Clone main repo ``git clone git@gitlab.outbox.co.ug:adidastest-philip/adidas-k8s.git``
+* Run ``minikube start``
+* Run ``minikube ip`` then add the ip address to `/etc/hosts` with a custom url. Run ``sudo vim /etc/hosts``. Then add ``x.x.x.x www.testadidas.io``
+* Create the postgres credentials on your local machine
+* Add environment variables
+
+.. code-block::
+
+    kubectl create secret generic postgres-user --from-literal=POSTGRES_USER='adidas-testdb-foobar'
+    kubectl create secret generic postgres-password --from-literal=POSTGRES_PASSWORD='yourtestpassword'
+    kubectl create secret generic postgres-host --from-literal=POSTGRES_HOST='localhost'
+    kubectl create secret generic database-type --from-literal=DATABASE_TYPE='test'
+    kubectl create secret generic postgres-sub-db --from-literal=POSTGRES_DB='adidas-test-sub'
+    kubectl create secret generic postgres-email-db --from-literal=POSTGRES_DB='adidas-test-email'
+    kubectl create secret generic postgres-auth-db --from-literal=POSTGRES_DB='adidas-test-auth'
+    kubectl create secret generic api-version --from-literal=API_VERSION='v1'
+    kubectl create secret generic secret-key --from-literal=SECRET_KEY='mn871rqc=2v$omiosampfodasmfdbyp62c)4794#y@s4123214'
+    kubectl create secret generic debug --from-literal=DEBUG='true'
+
+* Clone main repo ``git clone git@github.com:codephillip/adidas-k8s.git``
 * `Initialize submodules`_ ``git submodule update --init --recursive``
 * Adding secret/env to k8s. ``kubectl create secret generic jwt-secret --from-literal=JWT_KEY=asdf`` OR create `secret.yaml` and add base64 encoded values using ``$ echo -n "myfoobar" | base64``.
-* Add these environment variables to `.prod.env` in express services
+* Add these environment variables to `.prod.env` or `.dev.env` in express services. NOTE: Do this for all services
 
     .. code-block:: console
 
@@ -51,7 +69,7 @@ Localhost development setup
         TYPEORM_DATABASE=foobar-db
         TYPEORM_USERNAME=adidas-testdb-foobar
         TYPEORM_PASSWORD=s2e7gvCdG3eGXXX
-        TYPEORM_HOST=34.91.32.111
+        TYPEORM_HOST=localhost
         TYPEORM_ENTITIES=dist/**/*.model.js
         TYPEORM_MIGRATIONS=dist/migrations/*.js
         TYPEORM_MIGRATIONS_DIR=src/migrations
@@ -59,10 +77,16 @@ Localhost development setup
         TYPEORM_SYNCHRONIZE=true
         TYPEORM_LOGGING=true
 
+* Also add database credentials to the `.env` file. This is required by Typeform. NOTE: Do this for all services
+
+    .. code-block:: console
+
+        POSTGRES_DB=adidas-test-email
+        POSTGRES_USER=adidas-testdb-foobar
+        POSTGRES_PASSWORD=s2e7gvCdG3eGxvCJ
+        POSTGRES_HOST=localhost
 
 * Apply the secret object ``kubectl apply -f foobarfolder/secrets.yaml`` if you happen to have a `secrets.yaml` file
-* Run ``minikube start``
-* Run ``minikube ip`` then add the ip address to /etc/hosts with a custom url. Run ``sudo vim /etc/hosts``. Then add ``34.133.168.166 www.testadidas.io``
 * Enable ingress. ``minikube addons enable ingress``
 * Run ``skaffold dev -f skaffold_dev.yaml`` to start local minikube(k8s) tools
 
@@ -98,7 +122,49 @@ Local dev machine setup to push directly to production with skaffold
 - Login to gcloud using ``gcloud auth application-default login``
 - Add docker/k8s context by clicking `connect` button and copying the command ``gcloud container clusters get-credentials adidas-cluster1 --zone europe-west6-c --project adidas-317008``
 - Set zone if necessary ``gcloud config set compute/zone us-central1-c``
-- Run ``skaffold run``
+- Add environment variables if not done so already
+
+.. code-block::
+
+    kubectl create secret generic postgres-user --from-literal=POSTGRES_USER='adidas-testdb-instance'
+    kubectl create secret generic postgres-password --from-literal=POSTGRES_PASSWORD='s2e7gvCdG3eGxvCJ'
+    kubectl create secret generic postgres-host --from-literal=POSTGRES_HOST='35.189.219.141'
+    kubectl create secret generic database-type --from-literal=DATABASE_TYPE='production'
+    kubectl create secret generic postgres-sub-db --from-literal=POSTGRES_DB='adidas-test-sub'
+    kubectl create secret generic postgres-email-db --from-literal=POSTGRES_DB='adidas-test-email'
+    kubectl create secret generic postgres-auth-db --from-literal=POSTGRES_DB='adidas-test-auth'
+    kubectl create secret generic api-version --from-literal=API_VERSION='v1'
+    kubectl create secret generic secret-key --from-literal=SECRET_KEY='mn871rqc=2v$e-z9$rvl1m3njf+0byp62c)4794#y@s4y8d3@^*y'
+    kubectl create secret generic debug --from-literal=DEBUG='false'
+
+
+* Add these environment variables to `.prod.env` in express services. NOTE: Do this for all services
+
+.. code-block:: console
+
+    TYPEORM_CONNECTION=postgres
+    TYPEORM_DATABASE=adidas-test-email
+    TYPEORM_USERNAME=adidas-testdb-instance
+    TYPEORM_PASSWORD=s2e7gvCdG3eGxvCJ
+    TYPEORM_HOST=35.189.219.141
+    TYPEORM_ENTITIES=dist/**/*.model.js
+    TYPEORM_MIGRATIONS=dist/migrations/*.js
+    TYPEORM_MIGRATIONS_DIR=src/migrations
+    TYPEORM_MIGRATIONS_RUN=true
+    TYPEORM_SYNCHRONIZE=true
+    TYPEORM_LOGGING=true
+
+* Also add database credentials to the `.env` file. This is required by Typeform. NOTE: Do this for all services
+
+.. code-block:: console
+
+    # adidas test use one of the POSTGRES_DB shown above
+    POSTGRES_DB=adidas-test-foobar
+    POSTGRES_USER=adidas-testdb-instance
+    POSTGRES_PASSWORD=s2e7gvCdG3eGxvCJ
+    POSTGRES_HOST=35.189.219.141
+
+- Run ``skaffold dev`` if you want to monitor directly in your terminal. Otherwise ``skaffold run`` works best
 
 
 .. _`nginx ingress`: https://kubernetes.github.io/ingress-nginx/deploy/#gce-gke

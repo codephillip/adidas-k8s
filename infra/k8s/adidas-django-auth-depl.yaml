@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: adidas-django-auth
-          image: us.gcr.io/adidas-test-344408/adidas_django_auth
+          image: us.gcr.io/sixth-loader-344609/adidas_django_auth
           command: ['/bin/bash', 'run.sh'] # runs migrations and starts the server
           ports:
             - containerPort: 8000

@@ -9,7 +9,8 @@ This is the adidas backend challenge
 
 
 Tools
-======
+-------
+
 #. Typescript: Used to enforce data types mostly in asynchronous communication
 #. Swagger: Used for documentation
 #. Postman: Used to test various endpoints and create documentation
@@ -29,9 +30,19 @@ Tools
 #. Django: Used to create web microservice(only authentication service)
 #. Django Rest Framework: Used to create REST api endpoints in Django
 #. Python3: Used to implement the programming logic in Django microservices
+#. GCP: Used to build and run the k8s production app
+
+Microservices
+---------------
+
+- adidas-express-public. A backend for frontend service that acts a proxy server. Handles authentication, DDOS attacks
+- adidas-express-sub. Allows users to subscribe to a newsletter or campaign(one public url, the rest are admin access only)
+- adidas-express-email. Allows admins to send emails to the users(admin access only)
+- adidas-django-auth. An authentication service written in django and generates JWT tokens
 
 Resources
-==========
+-----------
+
 * Kubernetes cheetsheet_
 * Kubectl `docs or book`_
 * Microservices course_
@@ -75,8 +86,14 @@ Resources
 .. _Containerized: https://docs.microsoft.com/en-us/dotnet/architecture/microservices/
 
 
+Setup pages
+============
+
 :Setup instructions:
 :doc:`Setup instructions </setup>`
 
 :More:
 :doc:`More </other>`
+
+:Production test:
+:doc:`Production test </productiontest>`
