@@ -55,7 +55,10 @@ spec:
                   name: secret-key
                   key: SECRET_KEY
             - name: NODE_ENV
-              value: 'production'
+              valueFrom:
+                secretKeyRef:
+                  name: node-env
+                  key: NODE_ENV
 ---
 apiVersion: v1
 kind: Service
